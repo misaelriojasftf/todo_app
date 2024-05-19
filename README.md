@@ -1,16 +1,93 @@
-# demo
 
-A new Flutter project.
+# Demo - A Todo List App
+
+Developed with 💙  by [misaelriojas](https://github.com/misaelriojasftf)
+
+ [![style: very good analysis](https://img.shields.io/badge/style-very_good_analysis-B22C89.svg)](https://pub.dev/packages/very_good_analysis)
+
+## Overview
+
+This is a Flutter application for managing a todo list. The app is designed following the Clean Architecture pattern, ensuring a clear separation of concerns and maintainable code structure.
+
+## Folder Structure
+```css
+lib
+├── common
+│   └── domain
+│       └── utils
+│           └── utils.dart
+|   └── infrastructure
+│       └── storage
+│           └── hive_abstract.dart
+│           └── hive_repo.dart
+│           └── main.dart
+├── todo_list
+│   ├── domain
+│   │   ├── task_adapters.dart
+│   │   └── task.dart
+│   ├── infrastructure
+│   │   ├── state
+│   │   │   └── task_state.dart
+│   │   └── storage
+│   │       └── task_storage.dart
+│   └── presentation
+│       └── widgets
+│           ├── add_task_dialog.dart
+│           ├── delete_task_dialog.dart
+│           ├── edit_task_dialog.dart
+│           ├── task_item.dart
+│           └── todo_list_screen.dart
+└── main.dart
+```
+
+
+### Explanation of the Layers
+
+- **Common Layer**:
+   - Contains utility functions and shared code that can be used across different parts of the app.
+  - Deals with the storage mechanisms, such as Hive for local data persistence. Includes abstract classes and repositories for managing data operations.
+
+- **Todo List Feature**:
+   - **Domain Layer**:
+     - Contains the core business logic and models related to the todo list feature.
+   - **Infrastructure Layer**:
+     - Manages the state of tasks and specific storage implementation for tasks.
+   - **Presentation Layer**:
+     - Manages the user interface components related to the todo list, such as dialogs for adding, deleting, and editing tasks, the main screen, and individual task items.
+
+4. **Main Entry Point**:
+   - The entry point of the Flutter application, responsible for initializing and running the app.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### Prerequisites
 
-A few resources to get you started if this is your first Flutter project:
+- [FVM version 3.1.4](https://fvm.app/documentation/getting-started/installation)
+- [Android or iOS setup](https://docs.flutter.dev/get-started/install)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Running the App
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Clone Repo
+
+```fish
+git clone https://github.com/misaelriojasftf/todo_app.git
+cd demo
+```
+
+2. Install Dependencies
+
+(!) only if you don't have installed 3.22.0 yet
+
+```bash
+fvm install 3.22.0  
+```
+
+and
+
+```fish
+
+fvm use
+fvm flutter pub get 
+fvm flutter run 
+```
+
