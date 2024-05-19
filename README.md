@@ -91,3 +91,10 @@ fvm flutter pub get
 fvm flutter run 
 ```
 
+## Tests
+
+Run tests 
+
+```bash
+fvm flutter test 
+```
