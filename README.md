@@ -36,7 +36,7 @@ lib
 │           ├── delete_task_dialog.dart
 │           ├── edit_task_dialog.dart
 │           ├── task_item.dart
-│           └── todo_list_screen.dart
+│       └── todo_list_screen.dart
 └── main.dart
 ```
 
